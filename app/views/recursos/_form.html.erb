@@ -1,0 +1,16 @@
+<%= form_with model: recurso do |form| %>
+
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <%= form.label :imagen %>
+        <%= form.file_field :imagen %>
+    </div>
+
+    <div>
+        <%= form.submit "Agregar"%>
+    </div>
+<% end %>

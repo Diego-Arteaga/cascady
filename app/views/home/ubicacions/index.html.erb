@@ -1,0 +1,17 @@
+<h2>Ubicaciones</h2>
+
+<hr>
+<%=link_to "Regresar", admins_path%>
+<!--link_to "Agregar cliente", new_ubicacion_path%>-->
+<hr>
+
+<% if @ubicaciones.any? %>
+  <ul>
+    <% @ubicaciones.each do |ubicacion| %>
+      <li><%= ubicacion.calle %></li>
+    <% end %>
+  </ul>
+  <hr>
+<% else %>
+  <p>No se encontraron libros.</p>
+<% end %>

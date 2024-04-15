@@ -1,0 +1,12 @@
+<%= form_with model: ubicacion do |form| %>
+    <div class="flex flex-col min-[320px]:mx-[40px] min-[320px]:space-y-4 min-[320px]:mb-4 sm:mx-[110px] sm:space-y-6 sm:mb-6 md:mx-[160px] md:mb-8 lg:mx-16 xl:mx-[106px] 2xl:mx-[128px]">
+        <%= form.text_field :calle, class:"bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Calle"%>
+        <%= form.text_field :numero, class:"bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Número"%>
+        <%= form.text_field :cp, class:"bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"C.P."%>
+        <%= form.text_area :descripcion, class:"bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Decripción"%>
+        
+        <button class="bg-[#FF1F1F] rounded hover:bg-[#ED1515] min-[320px]:h-6 sm:h-[30px] md:h-9 xl:h-10 2xl:h-11">
+            <%= form.submit "Agregar", class:"font-ubuntu font-bold text-white min-[320px]:text-[12px] sm:text-[14px] xl:text-[16px] 2xl:text-[18px]"%>
+        </button>
+    </div>
+<% end %>

@@ -1,0 +1,17 @@
+<h2>producto <%=@producto.nombre%></h2>
+<hr>
+
+<%= link_to "Regresar", productos_path%>
+<hr>
+
+<%= image_tag @producto.foto, class:"rounded h-full min-[320px]:w-[46px] sm:w-[62px] md:w-[86px] xl:w-[104px] 2xl:w-[132px]" if @producto.foto.attached?%>
+<p>Descripción: <%=@producto.descripcion%></p>
+<p>Promocion: <%=@producto.promocion%></p>
+<p>Precio: <%=@producto.precio%></p>
+<p>Tipo: <%=@producto.tipo%></p>
+
+<%= link_to "Editar", edit_producto_path(@producto) %></li>
+<%= link_to "Eliminar", producto_path(@producto), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Estas seguro de eliminar el producto ?"
+} %>

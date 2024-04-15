@@ -1,0 +1,15 @@
+<h2>Recurso</h2>
+<hr>
+
+<%= link_to "Regresar", recursos_path%>
+<hr>
+
+<p>Titulo: <%=@recurso.title%></p>
+<%= image_tag @recurso.imagen, class:"rounded h-full min-[320px]:w-[46px] sm:w-[62px] md:w-[86px] xl:w-[104px] 2xl:w-[132px]" if @recurso.imagen.attached?%>
+
+
+<%= link_to "Editar", edit_recurso_path(@recurso) %></li>
+<%= link_to "Eliminar", recurso_path(@recurso), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Estas seguro de eliminar el recurso ?"
+} %>

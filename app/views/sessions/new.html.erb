@@ -1,0 +1,45 @@
+<body>
+    <nav class="bg-white grid grid-cols-12 flex-row content-center min-[320px]:h-8 sm:h-10 md:h-12 2xl:h-[52px]">
+        <div class="flex flex-row place-items-center space-x-2 col-span-5 min-[320px]:ml-2 sm:ml-3 md:ml-4 lg:ml-5 xl:ml-6 2xl:ml-7">
+            <svg class="fill-[#6B6A6F] min-[320px]:w-[10px] min-[320px]:h-[10px] sm:w-4 sm:h-4 md:w-[18px] md:h-[18px] xl:w-5 xl:h-5 2xl:w-[22px] 2xl:h-[22px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            <a href="<%=pre_login_path%>" class="font-ubuntu font-bold text-[#6B6A6F] min-[320px]:text-[10px] sm:text-[12px] md:text-[14px] xl:text-[16px] 2xl:text-[18px]">Volver</a>
+        </div>
+        <a href="<%=root_path%>"><img class="min-[320px]:w-6 min-[320px]:h-6 sm:w-8 sm:h-8 md:w-[38px] md:h-[38px] lg:w-[38px] lg:h-[38px] xl:w-[38px] xl:h-[38px] 2xl:w-10 2xl:h-10" src="<%=@url_logo%>" alt="logo"></a>
+    </nav>
+
+    <%= form_with(url: sessions_create_path) do |form|%>
+    <div class="lg:grid lg:grid-cols-12 h-screen">
+        <div class="relative bg-cover bg-center min-[320px]:hidden lg:flex lg:col-span-5" style="background-image: url('<%= @url_login %>');">
+            <p class="absolute bg-[rgba(0,0,0,0.5)] bg-cover h-full items-start flex place-self-center place-content-center w-full text-center font-ubuntu font-bold pt-[173px] text-white lg:text-[48px] 2xl:text-[52px]">¡Regresa y descubre las ofertas que tenemos solo para ti!</p>
+        </div>
+        <div class="flex flex-col lg:col-span-7">
+            <div class="flex place-content-center place-items-center min-[320px]:mt-6 min-[320px]:mb-4 sm:mt-9 sm:mb-6 md:mt-12 md:mb-8">
+                <p class="font-ubuntu font-bold min-[320px]:text-[16px] sm:text-[20px] md:text-[22px] lg:text-[24px] 2xl:text-[28px]">Inicio de sesión</p>
+            </div>
+            <div class="flex flex-col min-[320px]:mx-[40px] min-[320px]:space-y-4 min-[320px]:mb-4 sm:mx-[110px] sm:space-y-6 sm:mb-6 md:mx-[160px] md:mb-8 lg:mx-16 xl:mx-[106px] 2xl:mx-[128px]">
+                <%= form.text_field :telefono, class:"bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Número de teléfono"%>
+                <div class="flex flex-col space-y-1">
+                    <%= form.password_field :contraseña, class:"bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Ingresar tu contraseña"%>
+                    <div class="flex flex-row items-center space-x-1">
+                        <svg class="min-[320px]:w-[6px] min-[320px]:h-[6px] sm:w-3 sm:h-3 xl:w-[14px] xl:h-[14px] 2xl:w-4 2xl:h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#6b6a6f" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                        <p class="font-ubuntu font-light text-[#6B6A6F] min-[320px]:text-[6px] sm:text-[12px] xl:text-[14px] 2xl:text-[16px]">La contraseña debe tener entre 8 a 16 caracteres</p>
+                    </div>
+                    <div class="flex flex-row items-center space-x-1">
+                        <svg class="min-[320px]:w-[6px] min-[320px]:h-[6px] sm:w-3 sm:h-3 xl:w-[14px] xl:h-[14px] 2xl:w-4 2xl:h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#6b6a6f" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                        <p class="font-ubuntu font-light text-[#6B6A6F] min-[320px]:text-[6px] sm:text-[12px] xl:text-[14px] 2xl:text-[16px]">La contraseña debe de contener minimo dos símbolos o números</p>
+                    </div>
+                </div>
+
+                <button class="bg-[#FF1F1F] rounded hover:bg-[#ED1515] min-[320px]:h-6 sm:h-[30px] md:h-9 xl:h-10 2xl:h-11">
+                    <%= form.submit "Siguiente", class:"font-ubuntu font-bold text-white min-[320px]:text-[12px] sm:text-[14px] xl:text-[16px] 2xl:text-[18px]"%>
+                </button>
+            </div>
+            <div class="flex place-content-center place-items-center space-x-2">
+                <p class="font-ubuntu font-light border-r-2 border-solid border-black pr-2 flex place-items-center min-[320px]:text-[8px] min-[320px]:h-[10px] sm:text-[12px] sm:h-[14px] xl:text-[14px] xl:h-4">¿Olvidáste tu contraseña?</p>
+                <p class="font-ubuntu font-light flex place-items-center min-[320px]:text-[8px] sm:text-[12px] xl:text-[14px]">¿No tiénes una cuenta?</p>
+                <a href="<%=pre_login_path%>"><p class="font-ubuntu font-light text-[#FF1F1F] flex place-items-center min-[320px]:text-[8px] sm:text-[12px] xl:text-[14px]">Crea una</p></a>
+            </div>
+        </div>
+    </div>
+    <%end%>
+</body>

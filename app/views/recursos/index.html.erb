@@ -1,0 +1,17 @@
+<h2>Recursos</h2>
+
+<hr>
+<%=link_to "Regresar", admins_path%>
+<%=link_to "Agregar recurso", new_recurso_path%>
+
+<hr>
+<ul>
+    <% @recursos.each do |recurso|%>
+        <li>
+            <%= link_to recurso_path(recurso.id), class: 'recurso' do %>
+                <%=recurso.title %>
+            <%end%>
+        </li>
+        <hr>
+    <% end %>
+</ul>
