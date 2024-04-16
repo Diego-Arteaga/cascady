@@ -8,6 +8,10 @@ class HomeController < ApplicationController
     @url_burger = url_for(@recurso.imagen)
     @recurso = Recurso.find_by(title: "Pizzeria")
     @url_pizza = url_for(@recurso.imagen)
+    @recurso = Recurso.find_by(title: "Sushi")
+    @url_sushi = url_for(@recurso.imagen)
+    @recurso = Recurso.find_by(title: "Alitas")
+    @url_alitas = url_for(@recurso.imagen)
   end
   
   def list_products
@@ -39,6 +43,8 @@ class HomeController < ApplicationController
     @url_prelogin = url_for(@recurso.imagen)
     @recurso = Recurso.find_by(title: "Logotipo")
     @url_logo = url_for(@recurso.imagen)
+    @recurso = Recurso.find_by(title: "Google")
+    @url_google = url_for(@recurso.imagen)
   end
 
   def product_modal

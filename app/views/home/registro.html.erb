@@ -1,10 +1,10 @@
 <body>
     <nav class="bg-white grid grid-cols-12 flex-row content-center min-[320px]:h-8 sm:h-10 md:h-12 2xl:h-[52px]">
         <div class="flex flex-row place-items-center space-x-2 col-span-5 min-[320px]:ml-2 sm:ml-3 md:ml-4 lg:ml-5 xl:ml-6 2xl:ml-7">
-            <svg class="fill-[#6B6A6F] min-[320px]:w-[10px] min-[320px]:h-[10px] sm:w-4 sm:h-4 md:w-[18px] md:h-[18px] xl:w-5 xl:h-5 2xl:w-[22px] 2xl:h-[22px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            <a href="<%=pre_login_path%>" class="font-ubuntu font-bold text-[#6B6A6F] min-[320px]:text-[10px] sm:text-[12px] md:text-[14px] xl:text-[16px] 2xl:text-[18px]">Volver</a>
+            <a href="<%=pre_registro_path%>"><svg class="fill-[#6B6A6F] min-[320px]:w-[10px] min-[320px]:h-[10px] sm:w-4 sm:h-4 md:w-[18px] md:h-[18px] xl:w-5 xl:h-5 2xl:w-[22px] 2xl:h-[22px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></a>
+            <a href="<%=pre_registro_path%>" class="font-ubuntu font-bold text-[#6B6A6F] min-[320px]:text-[10px] sm:text-[12px] md:text-[14px] xl:text-[16px] 2xl:text-[18px]">Volver</a>
         </div>
-        <a href="<%=root_path%>"><img class="min-[320px]:w-6 min-[320px]:h-6 sm:w-8 sm:h-8 md:w-[38px] md:h-[38px] lg:w-[38px] lg:h-[38px] xl:w-[38px] xl:h-[38px] 2xl:w-10 2xl:h-10" src="<%=@url_logo%>" alt="logo"></a>
+        <img class="absolute place-self-center min-[320px]:w-6 min-[320px]:h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 2xl:w-11 2xl:h-11" src="<%=@url_logo%>" alt="cascady">
     </nav>
     <div class="lg:grid lg:grid-cols-12 h-screen">
         <div class="relative bg-cover bg-center min-[320px]:hidden lg:flex lg:col-span-5" style="background-image: url('<%= @url_new %>');">
