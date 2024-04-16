@@ -4,6 +4,10 @@ class HomeController < ApplicationController
   def index
     @recurso = Recurso.find_by(title: "Logotipo")
     @url_logo = url_for(@recurso.imagen)
+    @recurso = Recurso.find_by(title: "Hamburguesas")
+    @url_burger = url_for(@recurso.imagen)
+    @recurso = Recurso.find_by(title: "Pizzeria")
+    @url_pizza = url_for(@recurso.imagen)
   end
   
   def list_products
