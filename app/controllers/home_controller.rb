@@ -2,16 +2,11 @@ class HomeController < ApplicationController
   # http_basic_authenticate_with name: "cascady", password: "contraseña", except: [:index]
 
   def index
-    @recurso = Recurso.find_by(title: "Logotipo")
-    @url_logo = url_for(@recurso.imagen)
-    @recurso = Recurso.find_by(title: "Hamburguesas")
-    @url_burger = url_for(@recurso.imagen)
-    @recurso = Recurso.find_by(title: "Pizzeria")
-    @url_pizza = url_for(@recurso.imagen)
-    @recurso = Recurso.find_by(title: "Sushi")
-    @url_sushi = url_for(@recurso.imagen)
-    @recurso = Recurso.find_by(title: "Alitas")
-    @url_alitas = url_for(@recurso.imagen)
+    @url_logo = url_for(Recurso.find_by(title: "Logotipo").imagen)
+    @url_burger = url_for(Recurso.find_by(title: "Hamburguesas").imagen)
+    @url_pizza = url_for(Recurso.find_by(title: "Pizzeria").imagen)
+    @url_sushi = url_for(Recurso.find_by(title: "Sushi").imagen)
+    @url_alitas = url_for(Recurso.find_by(title: "Alitas").imagen)
   end
   
   def list_products
@@ -22,10 +17,8 @@ class HomeController < ApplicationController
 
   def registro
     @cliente = Cliente.new
-    @recurso = Recurso.find_by(title: "Registro")
-    @url_new = url_for(@recurso.imagen)
-    @recurso = Recurso.find_by(title: "Logotipo")
-    @url_logo = url_for(@recurso.imagen)
+    @url_new = url_for(Recurso.find_by(title: "Registro").imagen)
+    @url_logo = url_for(Recurso.find_by(title: "Logotipo").imagen)
   end
 
   def create_registro
@@ -39,12 +32,9 @@ class HomeController < ApplicationController
   end
 
   def pre_login
-    @recurso = Recurso.find_by(title: "Pre_registro")
-    @url_prelogin = url_for(@recurso.imagen)
-    @recurso = Recurso.find_by(title: "Logotipo")
-    @url_logo = url_for(@recurso.imagen)
-    @recurso = Recurso.find_by(title: "Google")
-    @url_google = url_for(@recurso.imagen)
+    @url_logo = url_for(Recurso.find_by(title: "Logotipo").imagen)
+    @url_prelogin = url_for(Recurso.find_by(title: "Pre_registro").imagen)
+    @url_google = url_for(Recurso.find_by(title: "Google").imagen)
   end
 
   def product_modal
