@@ -1,7 +1,18 @@
-<h2>Recurso</h2>
-<hr>
-
-<%= link_to "Regresar", recursos_path%>
-<hr>
-
-<%= render "form", recurso: @recurso%>
+<body>
+    <nav class="bg-white grid grid-cols-12 flex-row content-center min-[320px]:h-8 sm:h-10 md:h-12 2xl:h-[52px]">
+        <div class="flex flex-row place-items-center space-x-2 col-span-5 min-[320px]:ml-2 sm:ml-3 md:ml-4 lg:ml-5 xl:ml-6 2xl:ml-7">
+            <a href="<%=recursos_path%>">
+                <svg class="fill-[#6B6A6F] min-[320px]:w-[10px] min-[320px]:h-[10px] sm:w-4 sm:h-4 md:w-[18px] md:h-[18px] xl:w-5 xl:h-5 2xl:w-[22px] 2xl:h-[22px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </a>
+            <a href="<%=recursos_path%>">
+                <p class="font-ubuntu font-bold text-[#6B6A6F] min-[320px]:text-[10px] sm:text-[12px] md:text-[14px] xl:text-[16px] 2xl:text-[18px]">Volver</p>
+            </a>
+        </div>
+    </nav>
+    <div class="container mx-auto w-5/6">
+        <div class="flex-auto min-[320px]:mt-6 min-[320px]:mb-4 sm:mt-9 sm:mb-6 md:mt-12 md:mb-8">
+            <h1 class="text-center font-ubuntu font-bold min-[320px]:text-[16px] sm:text-[20px] md:text-[22px] lg:text-[24px] 2xl:text-[28px]">Crear nuevo recurso</h1>
+        </div>
+        <%= render "form", recurso: @recurso %>
+    </div>
+</body>

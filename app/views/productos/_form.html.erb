@@ -1,39 +1,31 @@
 <%= form_with model: producto do |form| %>
-    <% producto.errors.full_messages.each do |error| %>
-        <div><%= error %></div>
-    <% end %>
-    <br>
+    <div class="flex flex-col min-[320px]:mt-6 min-[320px]:mb-4 sm:mt-9 sm:mb-6 md:mt-12 md:mb-8">
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.text_field :nombre, class:"w-4/5 bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Nombre" %>
+        </div>
 
-    <div>
-        <%= form.label :nombre %>
-        <%= form.text_field :nombre %>
-    </div>
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.number_field :precio, class:" w-4/5 bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Precio" %>
+        </div>
 
-    <div>
-        <%= form.label :precio %>
-        <%= form.number_field :precio %>
-    </div>
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.text_field :promocion, class:"w-4/5 bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Promoción"%>
+        </div>
 
-    <div>
-        <%= form.label :descripcion %>
-        <%= form.text_area :descripcion %>
-    </div>
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.select :tipo, ['Hamburguesa', 'Pizza', 'Alitas', 'Bebidas', 'Hot-dogs'], class:"w-4/5 bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Categoria"%>
+        </div>
 
-    <div>
-        <%= form.label :promocion %>
-        <%= form.number_field :promocion %>
-    </div>
-    <div>
-        <%= form.label :tipo %>
-        <%= form.select :tipo, options_for_select(["Hamburguesa", "Papas", "Alitas"]) %>
-    </div>
-    <div>
-        <%= form.label :foto %>
-        <%= form.file_field :foto%>
-    </div>
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.text_area :descripcion, class:"w-4/5 bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Descripción"%>
+        </div>
 
-    <div>
-        <%= form.submit "Guardar"%>
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.file_field :img, class:"w-4/5 bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Imagen"%>
+        </div>
+
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.submit "Agregar", class:" w-4/5 px-4 py-2 font-ubuntu inline-block text-center bg-[#50BC00] text-white hover:bg-red-500 hover:text-white text-white font-bold py-2 px-4 rounded hover:bg-[#45A200] min-[320px]:h-6 sm:h-[30px] md:h-9 xl:h-10 2xl:h-11"%>
+        </div>
     </div>
 <% end %>
-<hr>

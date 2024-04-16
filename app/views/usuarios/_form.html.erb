@@ -1,30 +1,23 @@
 <%= form_with model: usuario do |form| %>
-  <% usuario.errors.full_messages.each do |error| %>
-    <div><%= error %></div>
-  <% end %>
-  <br>
-  <div>
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre %>
-  </div>
+    <div class="flex flex-col min-[320px]:mt-6 min-[320px]:mb-4 sm:mt-9 sm:mb-6 md:mt-12 md:mb-8">
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.text_field :nombre, class:"w-4/5 bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Nombre" %>
+        </div>
 
-  <div>
-    <%= form.label :correo %>
-    <%= form.email_field :correo %>
-  </div>
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.email_field :correo, class:"w-4/5 bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Correo" %>
+        </div>
 
-  <div>
-    <%= form.label :contraseña %>
-    <%= form.password_field :contraseña %>
-  </div>
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.password_field :contraseña, class:"w-4/5 bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Contraseña" %>
+        </div>
 
-  <div>
-    <%= form.label :roll %>
-    <%= form.select :roll, options_for_select(["Administrador", "Trabajador", "Repartidor"]) %>
-  </div>
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.select :roll, ["Administrador", "Trabajador", "Repartidor"], class:" bg-[#F5F5F5] rounded drop-shadow px-2 font-ubuntu font-light text-[#6B6A6F] focus:outline-none min-[320px]:text-[10px] min-[320px]:h-6 sm:h-[30px] sm:text-[14px] md:h-9 xl:h-10 xl:text-[16px] 2xl:h-11 2xl:text-[18px]", placeholder:"Roll" %>
+        </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
+        <div class="flex flex-auto justify-center py-2 px-4">
+            <%= form.submit "Agregar", class:" w-4/5 px-4 py-2 font-ubuntu inline-block text-center bg-[#50BC00] text-white hover:bg-red-500 hover:text-white text-white font-bold py-2 px-4 rounded hover:bg-[#45A200] min-[320px]:h-6 sm:h-[30px] md:h-9 xl:h-10 2xl:h-11"%>
+        </div>
+    </div>
 <% end %>
-<hr>
