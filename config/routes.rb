@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  root "home#index"
   get 'admins/index', to: 'admins#index', as: :admins
 
-  root "home#index"
+
   get 'home/registro', to: 'home#registro', as: :registro
   post 'home/create', to: 'home#create_registro'
   get 'home/list_products', to: 'home#list_products', as: :list_products

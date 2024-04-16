@@ -37867,3 +37867,14 @@ Processing by ProductosController#index as HTML
 Completed 200 OK in 287ms (Views: 21.2ms | ActiveRecord: 263.8ms | Allocations: 7815)
 
 
+Started GET "/admins/index" for 127.0.0.1 at 2024-04-15 21:01:40 -0600
+Processing by AdminsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/index.html.erb within layouts/application
+  Rendered admins/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 86)
+  Rendered layout layouts/application.html.erb (Duration: 77.7ms | Allocations: 6434)
+Completed 200 OK in 106ms (Views: 91.6ms | ActiveRecord: 0.0ms | Allocations: 6700)
+
+
+[dotenv] Set [36mDATABASE_URL[0m
+[dotenv] Loaded [33m.env[0m
