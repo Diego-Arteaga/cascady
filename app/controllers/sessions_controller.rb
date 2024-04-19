@@ -1,9 +1,5 @@
 class SessionsController < ApplicationController
     def new
-        @recurso = Recurso.find_by(title: "Login")
-        @url_login = url_for(@recurso.imagen)
-        @recurso = Recurso.find_by(title: "Logotipo")
-        @url_logo = url_for(@recurso.imagen)
     end
   
     def create

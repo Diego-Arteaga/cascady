@@ -1,11 +1,7 @@
-<body class="bg-cover bg-center h-screen" style="background-image: url('<%= @url_prelogin %>');">
-    <nav class="bg-white grid grid-cols-12 flex-row content-center min-[320px]:h-8 sm:h-10 md:h-12 2xl:h-[52px]">
-        <div class="flex flex-row place-items-center space-x-2 col-span-5 min-[320px]:ml-2 sm:ml-3 md:ml-4 lg:ml-5 xl:ml-6 2xl:ml-7">
-            <a href="<%=root_path%>"><svg class="fill-[#6B6A6F] min-[320px]:w-[10px] min-[320px]:h-[10px] sm:w-4 sm:h-4 md:w-[18px] md:h-[18px] xl:w-5 xl:h-5 2xl:w-[22px] 2xl:h-[22px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></a>
-            <a href="<%=root_path%>" class="font-ubuntu font-bold text-[#6B6A6F] min-[320px]:text-[10px] sm:text-[12px] md:text-[14px] xl:text-[16px] 2xl:text-[18px]">Volver</a>
-        </div>
-        <img class="absolute place-self-center min-[320px]:w-6 min-[320px]:h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 2xl:w-11 2xl:h-11" src="<%=@url_logo%>" alt="cascady">
-    </nav>
+<body class="bg-cover bg-center h-screen" style="background-image: url('<%=asset_path("pre_login.jpg")  %>');">
+
+    <%= render "shared/navbar2"%>
+
     <div class="flex place-content-center place-items-center">
         <div class="bg-white drop-shadow-2xl rounded-lg w-full min-[320px]:my-[32px] min-[320px]:mx-6 sm:my-[48px] sm:mx-[96px] md:mx-[128px] md:my-[64px] lg:mx-[160px] lg:my-[80px] xl:mx-[192px] 2xl:mx-[224px]">
             <div class="text-center min-[320px]:mt-3 min-[320px]:mb-4 sm:mt-[18px] sm:mb-6 md:mt-6 md:mb-8 lg:mt-[30px] lg:mb-10 xl:mt-[36px] xl:mb-[48px] 2xl:mt-[42px] 2xl:mb-[56px]">
@@ -13,7 +9,7 @@
             </div>
             <div class="flex flex-col justify-center min-[320px]:space-y-2 min-[320px]:mb-8 sm:space-y-3 sm:mb-[48px] md:space-y-4 md:mb-[64px] lg:space-y-5 lg:mb-20 xl:space-y-6 xl:mb-[96px]">
                 <button class="flex flex-row justify-center place-content-center place-items-center bg-[#881414] hover:bg-[#4B0404] hover:duration-100 rounded-[24px] min-[320px]:h-[28px] min-[320px]:mx-10 sm:h-[36px] sm:mx-[48px] md:h-10 md:mx-[64px] lg:h-11 lg:mx-[80px] xl:h-12 xl:mx-[96px] 2xl:h-[52px] 2xl:mx-[112px]">
-                    <img class="mr-2 min-[320px]:w-[16px] min-[320px]:h-[16px] sm:w-[20px] sm:h-[20px] xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" src="<%=@url_google%>" alt="google">
+                    <%=image_tag "google.png", class:"mr-2 min-[320px]:w-[16px] min-[320px]:h-[16px] sm:w-[20px] sm:h-[20px] xl:w-6 xl:h-6 2xl:w-7 2xl:h-7",  alt:"google"%>
                     <p class="font-ubuntu font-normal text-white min-[320px]:text-[12px] sm:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]">Continuar con Google</p>
                 </button>
 
